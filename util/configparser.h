@@ -1,4 +1,4 @@
-/* A Bison parser, made by GNU Bison 3.6.4.  */
+/* A Bison parser, made by GNU Bison 3.7.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
@@ -370,11 +370,17 @@ extern int yydebug;
     VAR_NSID = 571,                /* VAR_NSID  */
     VAR_ZONEMD_PERMISSIVE_MODE = 572, /* VAR_ZONEMD_PERMISSIVE_MODE  */
     VAR_ZONEMD_CHECK = 573,        /* VAR_ZONEMD_CHECK  */
-    VAR_ZONEMD_REJECT_ABSENCE = 574 /* VAR_ZONEMD_REJECT_ABSENCE  */
+    VAR_ZONEMD_REJECT_ABSENCE = 574, /* VAR_ZONEMD_REJECT_ABSENCE  */
+    VAR_INTERFACE_ACTION = 575,    /* VAR_INTERFACE_ACTION  */
+    VAR_INTERFACE_VIEW = 576,      /* VAR_INTERFACE_VIEW  */
+    VAR_INTERFACE_TAG = 577,       /* VAR_INTERFACE_TAG  */
+    VAR_INTERFACE_TAG_ACTION = 578, /* VAR_INTERFACE_TAG_ACTION  */
+    VAR_INTERFACE_TAG_DATA = 579   /* VAR_INTERFACE_TAG_DATA  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
 /* Token kinds.  */
+#define YYEMPTY -2
 #define YYEOF 0
 #define YYerror 256
 #define YYUNDEF 257
@@ -695,16 +701,21 @@ extern int yydebug;
 #define VAR_ZONEMD_PERMISSIVE_MODE 572
 #define VAR_ZONEMD_CHECK 573
 #define VAR_ZONEMD_REJECT_ABSENCE 574
+#define VAR_INTERFACE_ACTION 575
+#define VAR_INTERFACE_VIEW 576
+#define VAR_INTERFACE_TAG 577
+#define VAR_INTERFACE_TAG_ACTION 578
+#define VAR_INTERFACE_TAG_DATA 579
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 66 "./util/configparser.y"
+#line 67 "./util/configparser.y"
 
 	char*	str;
 
-#line 708 "util/configparser.h"
+#line 719 "util/configparser.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

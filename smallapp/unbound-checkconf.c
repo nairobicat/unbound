@@ -315,7 +315,7 @@ warn_hosts(const char* typ, struct config_stub* list)
 	struct config_strlist* h;
 	for(s=list; s; s=s->next) {
 		for(h=s->hosts; h; h=h->next) {
-			if(extstrtoaddr(h->str, &a, &alen)) {
+			if(extstrtoaddr(h->str, &a, &alen, UNBOUND_DNS_PORT)) {
 				fprintf(stderr, "unbound-checkconf: warning:"
 				  " %s %s: \"%s\" is an IP%s address, "
 				  "and when looked up as a host name "
@@ -336,7 +336,7 @@ interfacechecks(struct config_file* cfg)
 	socklen_t alen;
 	int i, j;
 	for(i=0; i<cfg->num_ifs; i++) {
-		if(!extstrtoaddr(cfg->ifs[i], &a, &alen)) {
+		if(!extstrtoaddr(cfg->ifs[i], &a, &alen, UNBOUND_DNS_PORT)) {
 			fatal_exit("cannot parse interface specified as '%s'",
 				cfg->ifs[i]);
 		}
